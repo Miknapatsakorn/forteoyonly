@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Cute</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* เอฟเฟกต์ขยายเต็มจอ */
+        .dog-fullscreen {
+            position: fixed !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) scale(1);
+            width: 300px;
+            height: auto;
+            z-index: 999;
+            transition: transform 0.8s ease-out, width 0.8s ease-out;
+        }
+        .dog-fullscreen.expand {
+            transform: translate(-50%, -50%) scale(8);
+            width: 100vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="top-area">
+            <div class="dog-wrap">
+                <div class="heart"></div>
+                <img src="dog.png" alt="Dog" id="dog" class="dog">
+                <div class="sparkle s1"></div>
+                <div class="sparkle s2"></div>
+                <div class="sparkle s3"></div>
+            </div>
+        </div>
+        <h1 class="headline">เห้ยย!! มีไรให้ดู อยากดูป่าว</h1>
+        <div class="buttons">
+            <button class="btn btn-green" onclick="explodeDog()">อยาก</button>
+            <button class="btn btn-red" onclick="explodeDog()">อยาก</button>
+        </div>
+    </div>
+
+    <script>
+        function explodeDog() {
+            const dog = document.getElementById('dog');
+            dog.classList.add('dog-fullscreen');
+            setTimeout(() => {
+                dog.classList.add('expand');
+            }, 50);
+
+            // รอให้ animation เสร็จแล้วไปหน้า love.html
+            setTimeout(() => {
+                window.location.href = 'love.html';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
