@@ -131,3 +131,67 @@ body{
   .buttons{ gap:40px; flex-wrap:wrap; }
   .btn{ min-width:160px; height:64px; font-size:28px; }
 }
+/* 🌈 พื้นหลังน่ารักกวนๆ */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fff6f9 0%, #ffeaf5 40%, #e5f1ff 100%);
+  overflow: hidden;
+  font-family: "Sarabun", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 🐾 ใส่ลายพาวหมา + หัวใจลอย */
+.bg-decor {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-decor span {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.6;
+  animation: float 12s linear infinite;
+}
+
+.bg-decor span:nth-child(odd) { color: #ff7a9c; }
+.bg-decor span:nth-child(even) { color: #ffb6d9; }
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% { opacity: 0.9; }
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ✨ ดวงดาววิ้ง */
+.spark-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+.spark-bg span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.8;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%,100% { transform: scale(0.5); opacity: 0.3; }
+  50% { transform: scale(1.4); opacity: 1; }
+}
+
