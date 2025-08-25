@@ -1,18 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Love Letter</title>
-<link rel="stylesheet" href="love.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Envelope</title>
+  <link rel="stylesheet" href="love.css">
 </head>
 <body>
+  <!-- ใช้ checkbox + label เพื่อเปิด/ปิดซอง -->
+  <input id="open-letter" type="checkbox" class="visually-hidden" aria-label="เปิด/ปิดซองจดหมาย" />
 
-<div class="container">
-    <img src="mikk.png" alt="Envelope" class="envelope" id="envelope">
-    <button class="open-btn" id="openBtn">OPEN IT!!!!!!!</button>
-</div>
+  <!-- เวทีวางซอง -->
+  <div class="stage">
+    <div class="envelope" aria-hidden="true">
+      <div class="env-base">
+        <div class="env-shadow"></div>
+      </div>
+      <div class="env-flap"></div>
+      <div class="seal" aria-hidden="true">❤</div>
+      <div class="letter" role="document">
+        <h1>ถึงเด็กอ้วน💌</h1>
+        <p>
+          ขอให้อ้วนเจอแต่สิ่งดีๆในทุกๆวันนะมีฟามสุขเย้อๆพี่จะคอยอยู่เป็นกำลังใจเล็กๆให้อ้วนแบบนี้ไปเรื่อยๆเลยย
+          และก็อย่าลืมยิ้มให้กับตัวเองด้วยบ้างล่ะ:)<br/>
+          💌 <mark><b>มีอะไรจะให้ดูด้วยยย!!!</b></mark>
+          <a href="https://www.tiktok.com/@user31307342991910/video/7542391934661250312?_t=ZS-8zAGvrQGXmj&_r=1"
+   target="_blank"
+   rel="noopener noreferrer">กดตรงนี้เบยยย</a>
 
-<script src="script.js"></script>
+
+        </p>
+
+        <!-- รูป -->
+        <img src="love-removebg-preview.png" alt="love bouquet" class="letter-img right-img" />
+        <img src="lovemt-removebg-preview.png" alt="love cartoon" class="letter-img left-img" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ ปุ่มกดเปิด/ปิด -->
+  <div class="btn-container">
+    <label for="open-letter" class="open-btn">💌 เปิด/ปิดซอง</label>
+  </div>
 </body>
 </html>
